@@ -53,7 +53,24 @@ G= drop_low_weighted_edge(G, 130)
 ```
 
 - 고객요구사항의 중요도 산정
+  - 고객요구사항의 중요도를 산정하기 위해 가장 먼저 리뷰 데이터에서의 긍정 형용사와 고객요구사항들 간의 동시발생 행렬을 구축한다. <br>
+  - ```ln⁡(Y)=B_0+B_1X_1+⋯+B_i X_i+e_i``` 
+  - 상단의 식에서 X_i는 고객요구사항과 긍정적 형용사 간의 동시 발생 빈도를 뜻하고, Y는 긍정 형용사의 발생 빈도를 뜻한다. 종속변수 Y값에는 로그를 취함으로써 변화율 개념을 적용하고 회귀선의 오차를 줄인다. 마지막으로 회귀분석을 통해 도출되는 B_i가 본 연구에서 찾고자 하는 각 고객요구사항들의 가중치가 된다. 해당 가중치의 보정을 통해 중요도를 계산할 수 있다.
+
+
 - 리뷰 분석 결과
+  - 네트워크 시각화 결과는 다음과 같다.
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/64299475/127339514-8ae00d09-b715-4427-9dd6-9bbd212a8db5.jpeg" height="500"><br>
+갤럭시Z폴드2 네트워크분석 그래프<br><br>
+<img src = "https://user-images.githubusercontent.com/64299475/127339523-ac13ec96-cc31-4125-a5d5-539d60ab7778.jpeg" height="500"><br>
+갤럭시Z 네트워크분석 그래프
+</p>
+
+  - 또한 각 표의 가장 오른쪽 열은 회귀 분석을 통해 이끌어낸 중요도다. 이를 통해 갤럭시Z폴드2의 고객이 가장 중요하게 생각하는 요소는 ‘영상’, 갤럭시Z플립은 ‘분할’임을 파악할 수 있다.
+
+<p align = "center">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/64299475/127340829-c8b5d0c3-9c1d-48bf-9ae3-190b19fdaf0f.png"></p>
 
 
 
