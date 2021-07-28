@@ -29,8 +29,34 @@
   - 데이터 전처리 과정을 거쳐 데이터를 분석하기 좋은 형태로 만들어준다. 전처리 과정은 문장 단위로의 분할, 한국어 추출, 형태소 분석, 불용어 제거, 형용사 normalization 과정으로 이루어진다.
 - 네트워크 분석 및 고객요구사항 도출
   - 네트워크 분석을 위해 앞서 전처리 했던 데이터의 동시발생행렬을 구축한다. 그리고 시각화 된 네트워크 분석 그래프를 통해 고객요구사항을 합리적으로 결정한다. 이 과정을 통해 갤럭시Z폴드2는 총 9개, 갤럭시Z플립은 총 11개의 고객요구사항이 도출된다.
+  
+```python
+#네트워크분석 그래프 구축
+
+import networkx as nx
+G = nx.from_pandas_edgelist(a,  edge_attr=True)
+
+# Weight가 일정값 이하인 노드 삭제
+
+def drop_low_weighted_edge(inputG, above_weight=3):
+    rG = nx.Graph()
+    rG.add_nodes_from(inputG.nodes(data=True))
+    edges = filter(lambda e: True if e[2]['weightcustom']>=above_weight else False, inputG.edges(data=True))
+    rG.add_edges_from(edges)
+
+    for n in inputG.nodes():
+        if len(list(nx.all_neighbors(rG, n)))==0:
+            rG.remove_node(n)
+    return rG
+
+G= drop_low_weighted_edge(G, 130)
+```
+
 - 고객요구사항의 중요도 산정
 - 리뷰 분석 결과
+
+
+
 
 ### 기술 특성 도출 및 상관관계 평가
 - 특허 데이터 분석
