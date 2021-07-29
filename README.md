@@ -60,14 +60,13 @@ G= drop_low_weighted_edge(G, 130)
 
 - 리뷰 분석 결과
   - 네트워크 시각화 결과는 다음과 같다.
+  - 또한, 회귀 분석을 통해 이끌어낸 중요도를 통해 갤럭시Z폴드2의 고객이 가장 중요하게 생각하는 요소는 ‘영상’, 갤럭시Z플립은 ‘분할’임을 파악할 수 있다.
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/64299475/127339514-8ae00d09-b715-4427-9dd6-9bbd212a8db5.jpeg" height="500"><br>
 갤럭시Z폴드2 네트워크분석 그래프<br><br>
 <img src = "https://user-images.githubusercontent.com/64299475/127339523-ac13ec96-cc31-4125-a5d5-539d60ab7778.jpeg" height="500"><br>
 갤럭시Z 네트워크분석 그래프
 </p>
-
-  - 또한 각 표의 가장 오른쪽 열은 회귀 분석을 통해 이끌어낸 중요도다. 이를 통해 갤럭시Z폴드2의 고객이 가장 중요하게 생각하는 요소는 ‘영상’, 갤럭시Z플립은 ‘분할’임을 파악할 수 있다.
 
 <p align = "center">
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/64299475/127340829-c8b5d0c3-9c1d-48bf-9ae3-190b19fdaf0f.png"></p>
@@ -77,7 +76,16 @@ G= drop_low_weighted_edge(G, 130)
 
 ### 기술 특성 도출 및 상관관계 평가
 - 특허 데이터 분석
+  - 특허정보검색서비스(KIPRIS)를 활용한 특허 데이터 분석을 통해 앞서 살펴본 폴더블 스마트폰의 고객 요구사항별 기술 특성을 파악해 보고자 한다. 우선 앞서 선정된 주요 고객요구 사항들을 검색에 적합한 특허식으로 전환하였다. 두 번쨰로, 검색된 특허에서 ‘발명 효과’의 내용을 참고하여 주요한 기술특성을 범주화하였다. 세 번째로, 주요 고객요구 사항들과 도출된 기술특성 간의 관계를 살펴보았다. 각각의 고객요구 사항들이 갖는 주요 특허의 수 및 기술특성을 표로 시각화하고자 하였다.
 - 특허분석 결과
+   - 최종 품질의 집에서, 관계점수에 중요도를 곱하여 합산하게 되면 핵심품질특성(CTQ)을 도출할 수 있다. 최종적으로 영상의 성능개선을 가장 주요한 핵심품질특성(CTQ)으로 선정하였다. 
+<p align = "center">
+<img width="526" alt="image" src="https://user-images.githubusercontent.com/64299475/127410898-be3850e5-5109-4aac-808d-e20d79fdca1e.png"><br>
+갤럭시Z폴드2 최종 품질의 집(HOQ)<br><br>
+<img width="526" alt="image" src="https://user-images.githubusercontent.com/64299475/127410902-c593b70e-7c65-47bf-8b3f-9d47eae2690e.png"><br>
+갤럭시Z플립 최종 품질의 집(HOQ)</p>
+
+
 
 ### 목표치 설정
 - 헤도닉 가격 분석
