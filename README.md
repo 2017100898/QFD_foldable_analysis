@@ -110,6 +110,6 @@ G= drop_low_weighted_edge(G, 130)
 - 그렇지만 본 연구는 기존의 품질기능전개(QFD)와는 각각의 단계에서 차별적인 방법을 통해 진행되었다는 점에서 의의를 갖는다. 또한 내부 기술자가 아닌 제3자의 입장에서 품질기능을 전개하였고 데이터분석을 경영관리 기법에 적용해보았다는 점에서 의의를 갖는다.
 
 ## Reports
-* Midterm PPT: [Report](Report/midterm.pdf)
-* Final PPT: [Report](Report/final.pdf)
+* Midterm PPT: [Report](Report/midterm.pptx)
+* Final PPT: [Report](Report/final.pptx)
 * Final Thesis: [Report](Reports/FinalThesis.pdf)
