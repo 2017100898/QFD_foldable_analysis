@@ -89,7 +89,19 @@ G= drop_low_weighted_edge(G, 130)
 
 ### 목표치 설정
 - 헤도닉 가격 분석
+  - ```P=P(Q_1,Q_2,Q_3,…,Q_i,…,Q_m)```
+  - 헤도닉 가격모형은 알고자 하는 목표 값을 P 로 두고, 목표 값에 대해 의사결정을 할 때 고려되는 다양한 특성들을 Q_1 (i=1,2,…,m) 에 대입한다. 그리고 모든 변수들을 가격으로 가치를 설정하여 가치를 평가하는 모형이다. 본 연구에서는 다음 헤도닉 가격함수를 스마트폰에 적용해서 분석을 진행하였다.
 - 헤도닉 가격 분석 결과
+  - 각 독립변수들의 기준과 단위에 따라 데이터를 수집하여 파이썬 사이킷런 전처리 라이브러리를 이용해 정규화 과정을 거쳤다. 그렇게 전처리 된 데이터를 기반으로 피어슨 상관분석을 진행하였고, 각 요인들 간의 상관관계가 80% 이상인 것들은 통합하여 2차적으로 X요인들을 추려냈다. 추려낸 X요인들을 본 연구 리뷰 분석을 통해 고객 요구사항을 도출해냈을 때와 동일한 방법으로 다중 회귀분석을 거쳤으며, 유의도 10%를 기준으로 유의수준이 좋고, 신뢰도가 높게 나오는 X요인들의 조합을 찾아 최종 X요인들로 선정하였다. 
+  - 두께 요인의 경우, 시대의 흐름에 따라 더 얇고 가벼운 스마트폰을 선호하는 소비자들의 경향이 가격에 음의 영향을 미침으로써 잘 반영되었음을 알 수 있다. 특히 폴더블 기능을 지원할 때에 가격에 미치는 영향이 가장 크고, 그 외 후면카메라의 개수나 RAM, 크기 또한 양의 영향을 미치는 것을 알 수 있다.
+<p align = "center">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/64299475/127454066-8bad9445-7818-4e51-a51c-60e86f4f6224.png"><br>
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/64299475/127454076-09af17d1-1aa8-442c-9a32-69e1ef0ad45a.png"><br>유의한 최종 X요인 다중회귀 결과</p>
+
+<br>
+ <p align = "center">
+ <img width="510" alt="20210729_170136" src="https://user-images.githubusercontent.com/64299475/127455116-49b73ff0-edb0-4b92-9a0e-2dff8a51889d.png"><br>X요인들이 Y요인에 미치는 영향</p>
+
 
 
 ## Conclusion
@@ -98,6 +110,6 @@ G= drop_low_weighted_edge(G, 130)
 - 그렇지만 본 연구는 기존의 품질기능전개(QFD)와는 각각의 단계에서 차별적인 방법을 통해 진행되었다는 점에서 의의를 갖는다. 또한 내부 기술자가 아닌 제3자의 입장에서 품질기능을 전개하였고 데이터분석을 경영관리 기법에 적용해보았다는 점에서 의의를 갖는다.
 
 ## Reports
-* Midterm PPT: [Report](Reports/Midterm.pdf)
-* Final PPT: [Report](Reports/Final.pdf)
+* Midterm PPT: [Report](Report/midterm.pdf)
+* Final PPT: [Report](Report/final.pdf)
 * Final Thesis: [Report](Reports/FinalThesis.pdf)
