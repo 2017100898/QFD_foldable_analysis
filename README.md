@@ -111,4 +111,3 @@ G= drop_low_weighted_edge(G, 130)
 ## Reports
 * Midterm PPT: [Report](Report/midterm.pptx)
 * Final PPT: [Report](Report/final.pptx)
-* Final Thesis: [Report](Reports/FinalThesis.pdf)
